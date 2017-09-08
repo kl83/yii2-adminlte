@@ -1,5 +1,5 @@
 <?php
-namespace kl83\assets;
+namespace kl83\adminlte;
 
 class AdminLTEAsset extends \yii\web\AssetBundle
 {
