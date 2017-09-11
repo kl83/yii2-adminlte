@@ -1,4 +1,4 @@
 jQuery(function($){
-    /* Sidebar open/close/minimize */
-    $('[data-toggle="push-menu"]').pushMenu();
+    // Sidebar menu item activator
+    $('section.sidebar li.active').parents('li').addClass('active');
 });

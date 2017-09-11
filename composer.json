@@ -1,10 +1,21 @@
 {
     "name": "kl83/yii2-adminlte",
     "require": {
-        "php": ">=5.4",
-        "yiisoft/yii2": "~2.0.6",
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "bower-asset/admin-lte": "~2.3.0"
+        "bower-asset/admin-lte": "~2.3.0",
+        "kl83/yii2-fontawesome-asset": "~1.0.0",
+        "kl83/yii2-ionicons-asset": "~1.0.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3",
+        "guzzlehttp/guzzle": ">=4.1.4 <7.0"
     },
     "license": "MIT",
     "authors": [
@@ -13,6 +24,15 @@
             "email": "solovyov.a.a.19@gmail.com"
         }
     ],
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset":{
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
+    },
     "autoload": {
         "psr-4": { "kl83\\adminlte\\": "" }
     }

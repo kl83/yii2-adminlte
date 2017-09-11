@@ -3,7 +3,7 @@ namespace kl83\adminlte;
 
 class AdminLTEAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@bower/admin-lte/dist';
+    public $sourcePath = '@bower/admin-lte';
     public $depends = [
         'yii\bootstrap\BootstrapAsset',
     ];
@@ -11,11 +11,13 @@ class AdminLTEAsset extends \yii\web\AssetBundle
     {
         $min = YII_DEBUG ? '' : '.min';
         $this->css = [
-            "css/AdminLTE$min.css",
-            "css/skins/_all-skins$min.css",
+            "dist/css/AdminLTE$min.css",
+            "dist/css/skins/_all-skins$min.css",
         ];
         $this->js = [
-            "js/app$min.js",
+            "dist/js/app$min.js",
+            "plugins/slimScroll/jquery.slimscroll$min.js",
+            "plugins/jQueryUI/jquery-ui$min.js",
         ];
     }
 }

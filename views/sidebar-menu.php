@@ -1,4 +1,12 @@
-<ul class="sidebar-menu">
-    <li class="active"><a href="#"><span>Link</span></a><</li>
-    <li><a href="#"><span>Another Link</span></a></li>
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $items array */
+
+$widget = $this->context;
+?>
+<ul class="sidebar-menu" data-widget="tree">
+    <?php foreach ( $items as $item ) : ?>
+        <?= $this->render('sidebar-menu-item', [ 'item' => $item ]) ?>
+    <?php endforeach; ?>
 </ul>
