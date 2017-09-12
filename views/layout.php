@@ -14,7 +14,6 @@ $widget = $this->context;
 ?>
 <?= Html::beginTag('body', $bodyOptions) ?>
     <?php $this->beginBody() ?>
-<?= $_SERVER['REQUEST_URI'] ?>
     <div class="wrapper">
         <header class="main-header">
             <?= Html::a($logo, $logoUrl, [ 'class' => 'logo' ]) ?>
