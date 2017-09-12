@@ -92,6 +92,12 @@ class LayoutWidget extends \yii\base\Widget
     public $breadcrumbs;
 
     /**
+     * Wrap content with .box>.box-body.
+     * @var boolean
+     */
+    public $wrapContent = true;
+
+    /**
      * Content.
      * @var string
      */
@@ -131,6 +137,7 @@ class LayoutWidget extends \yii\base\Widget
             'sidebarMenu' => $this->sidebarMenu,
             'pageHeader' => $pageHeader,
             'breadcrumbs' => $breadcrumbs,
+            'wrapContent' => $this->wrapContent,
             'content' => $this->content,
         ]);
     }

@@ -11,6 +11,7 @@ use yii\widgets\Breadcrumbs;
 /* @var $pageHeader string */
 /* @var $breadcrumbs array */
 /* @var $content string */
+/* @var $wrapContent boolean */
 
 ?>
 <?= Html::beginTag('body', $bodyOptions) ?>
@@ -41,7 +42,15 @@ use yii\widgets\Breadcrumbs;
                 <?= Breadcrumbs::widget($breadcrumbs) ?>
             </div>
             <div class="content">
-                <?= $content ?>
+                <?php if ( $wrapContent ) : ?>
+                    <div class="box">
+                        <div class="box-body">
+                            <?= $content ?>
+                        </div>
+                    </div>
+                <?php else : ?>
+                    <?= $content ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
