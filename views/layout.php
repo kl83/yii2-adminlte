@@ -1,16 +1,17 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
+use yii\widgets\Breadcrumbs;
 
 /* @var $this \yii\web\View */
-/* @var $widget \kl83\adminlte\LayoutWidget */
 /* @var $bodyOptions array */
 /* @var $logo string */
 /* @var $logoUrl array|string */
 /* @var $headerNav array */
+/* @var $pageHeader string */
+/* @var $breadcrumbs array */
 /* @var $content string */
 
-$widget = $this->context;
 ?>
 <?= Html::beginTag('body', $bodyOptions) ?>
     <?php $this->beginBody() ?>
@@ -35,6 +36,10 @@ $widget = $this->context;
             </section>
         </aside>
         <div class="content-wrapper">
+            <div class="content-header">
+                <h1><?= $pageHeader ?></h1>
+                <?= Breadcrumbs::widget($breadcrumbs) ?>
+            </div>
             <div class="content">
                 <?= $content ?>
             </div>

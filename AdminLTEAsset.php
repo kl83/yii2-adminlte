@@ -6,6 +6,7 @@ class AdminLTEAsset extends \yii\web\AssetBundle
     public $sourcePath = '@bower/admin-lte';
     public $depends = [
         'yii\bootstrap\BootstrapAsset',
+        'yii\jui\JuiAsset',
     ];
     public function init()
     {
@@ -17,7 +18,6 @@ class AdminLTEAsset extends \yii\web\AssetBundle
         $this->js = [
             "dist/js/app$min.js",
             "plugins/slimScroll/jquery.slimscroll$min.js",
-            "plugins/jQueryUI/jquery-ui$min.js",
         ];
     }
 }

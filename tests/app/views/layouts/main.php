@@ -49,6 +49,10 @@ AppAsset::register($this);
     ],
     'sidebarMenu' => [
         [
+            'text' => 'GridView',
+            'url' => ['site/gridview'],
+        ],
+        [
             'type' => LayoutWidget::SIDEBAR_MENU_ITEM_TYPE_HEADER,
             'text' => 'MAIN NAVIGATION',
         ], [
@@ -267,6 +271,8 @@ AppAsset::register($this);
             'icon' => 'fa-book',
         ],
     ],
+    'pageHeader' => false,
+    'breadcrumbs' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : null,
     'content' => $content,
 ]) ?>
 </html>

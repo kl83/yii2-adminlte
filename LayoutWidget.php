@@ -80,6 +80,18 @@ class LayoutWidget extends \yii\base\Widget
     public $sidebarMenu;
 
     /**
+     * Page header. Default is $this->view->title. If is must by empty, then set this property to null.
+     * @var string
+     */
+    public $pageHeader = false;
+
+    /**
+     * Configuration of yii\widgets\Breadcrumbs. Or only 'links' attribute.
+     * @var array
+     */
+    public $breadcrumbs;
+
+    /**
      * Content.
      * @var string
      */
@@ -101,12 +113,24 @@ class LayoutWidget extends \yii\base\Widget
         BaseAsset::register($this->view);
         $bodyOptions = $this->bodyOptions;
         $bodyOptions['class'] .= " $this->skin";
+        $pageHeader = $this->pageHeader === false ? $this->view->title : $this->pageHeader ;
+        if ( is_array($this->breadcrumbs) && $this->breadcrumbs ) {
+            if ( isset($this->breadcrumbs['links']) ) {
+                $breadcrumbs = $this->breadcrumbs;
+            } else {
+                $breadcrumbs = [ 'links' => $this->breadcrumbs ];
+            }
+        } else {
+            $breadcrumbs = [];
+        }
         return $this->render('layout', [
             'bodyOptions' => $bodyOptions,
             'logo' => $this->logo,
             'logoUrl' => $this->logoUrl,
             'headerNav' => $this->headerNav,
             'sidebarMenu' => $this->sidebarMenu,
+            'pageHeader' => $pageHeader,
+            'breadcrumbs' => $breadcrumbs,
             'content' => $this->content,
         ]);
     }
