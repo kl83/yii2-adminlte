@@ -7,7 +7,7 @@ use yii\helpers\Url;
 /* @var $item array */
 
 if ( isset($item['active']) ) {
-    $active = (bool)$item['active'];
+    $active = $item['active'] ? 'active' : '';
 } else {
     $active = ! isset($item['items'])
         && isset($item['url'])
