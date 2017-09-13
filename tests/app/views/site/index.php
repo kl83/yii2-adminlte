@@ -13,6 +13,8 @@ $this->params['breadcrumbs'] = [
     'Edit',
 ];
 
+Yii::$app->session->setFlash('hello-world', 'Hello, world!');
+
 $faker = Faker\Factory::create();
 ?>
 <div class="site-index">

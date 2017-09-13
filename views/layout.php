@@ -45,6 +45,11 @@ use yii\widgets\Breadcrumbs;
                 <?php if ( $wrapContent ) : ?>
                     <div class="box">
                         <div class="box-body">
+                            <?php if ( Yii::$app->session->allFlashes ) : ?>
+                                <?= $this->render('flashes', [
+                                    'flashes' => Yii::$app->session->allFlashes,
+                                ]) ?>
+                            <?php endif; ?>
                             <?= $content ?>
                         </div>
                     </div>
