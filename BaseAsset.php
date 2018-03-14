@@ -5,8 +5,6 @@ class BaseAsset extends \yii\web\AssetBundle
 {
     public $depends = [
         'kl83\adminlte\AdminLTEAsset',
-        'kl83\assets\FontawesomeAsset',
-        'kl83\assets\IoniconsAsset',
     ];
     public $js = [
         'js/base.js',
