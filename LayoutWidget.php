@@ -116,7 +116,7 @@ class LayoutWidget extends \yii\base\Widget
 
     public function run()
     {
-        BaseAsset::register($this->view);
+        AdminLTEAsset::register($this->view);
         $bodyOptions = $this->bodyOptions;
         $bodyOptions['class'] .= " $this->skin";
         $pageHeader = $this->pageHeader === false ? $this->view->title : $this->pageHeader ;
