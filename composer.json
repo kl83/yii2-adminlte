@@ -1,5 +1,6 @@
 {
     "name": "kl83/yii2-adminlte",
+    "description": "Yii2 AdminLTE",
     "require": {
         "php": ">=7.0",
         "yiisoft/yii2": "~2.0.0",
@@ -10,7 +11,9 @@
     },
     "autoload": {
         "psr-4": {
-            "kl83\\adminlte\\": "src/"
+            "kl83\\adminlte\\": [
+                "src/assets/"
+            ]
         }
     },
     "authors": [

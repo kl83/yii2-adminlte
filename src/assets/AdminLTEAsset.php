@@ -1,6 +1,6 @@
 <?php
 
-namespace kl83\adminlte\assets;
+namespace kl83\adminlte;
 
 use yii\bootstrap\BootstrapAsset;
 use yii\web\AssetBundle;
