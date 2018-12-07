@@ -6,7 +6,7 @@
         "yiisoft/yii2": "~2.0.0",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "almasaeed2010/adminlte": "~2.4",
-        "fortawesome/font-awesome": "~4.0.0",
+        "fortawesome/font-awesome": "^4.0",
         "npm-asset/ionicons": "~2.0.0"
     },
     "autoload": {
